@@ -1,0 +1,21 @@
+
+{% extends "base.html" %}
+{% block content%}
+<!DOCTYPE HTML>
+<hmtl>
+    <style>
+        p {color:red}
+    </style>
+<body>
+<form action="/newpost" method='post'>
+<label>Title:</label><br>
+<input type = "text" name="title"value={{title}}></input>
+<p>{{title_error}}</p>
+<label>Your new blog</label><br>
+<textarea rows="4" cols="25" name="blog" value={{blog}}></textarea><br><br>
+<p>{{blog_error}}</p>
+<input type="submit" value="Add post"></input>
+</form>
+</body>
+</html>
+{% endblock %}
