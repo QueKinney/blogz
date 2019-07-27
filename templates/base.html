@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
+    <style>
+            p {color:red}
+    </style>
     <body>
         <h1>Blogz</h1>
-
+        
         <div>
-            <a href="/blog">Blog Posts</a>
-            <a href="/newpost">New Post</a>
+            <ul>       
+           <li><a href="/">Home Page</a></li>
+           <li><a href="/blog">Main Page</a></li>
+           <li><a href="/newpost">New Post</a></li>
+           <li><a href="/login">Login</a></li> 
+           <li><a href="/signup">New User</a></li>
+           <li><a href="/logout">Logout</a></li> 
+            </ul>
         </div>
         {% with messages = get_flashed_messages(with_categories=True) %}
         <ul>
@@ -14,7 +23,7 @@
         {% endfor %}
         </ul>
     {% endwith %}
-    </body>
     {% block content%}
     {% endblock %}
+    </body>
 </html>

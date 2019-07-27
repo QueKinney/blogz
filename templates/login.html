@@ -1,11 +1,6 @@
+{% extends "base.html" %}
 
 {% block content%}
-<!DOCTYPE HTML>
-<hmtl>
-    <style>
-        p {color:red}
-    </style>
-<body>
     <h1>Login</h1>
     <form method='post'action="/login">
         <label>Username</label>
@@ -20,6 +15,4 @@
         <input type="Submit" value = "Login"/>
 
     </form>
-</body>
-</html>
 {% endblock %}

@@ -2,6 +2,8 @@
 {% block content %}
 
 <div>
+     {% for blog in all_blog %}
+    <h1><a href="/blog?user={{all_blog.user.id}}">{{all_blog.user.username}}</a></h1>
     <h1>{{all_blog.title}}</h1>
     <h2>{{all_blog.body}}</h2>  
 </div>
@@ -11,6 +13,6 @@
 
 
 
-
+   
 
 {% endblock %}

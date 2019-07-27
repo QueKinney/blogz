@@ -2,10 +2,10 @@
 {% block content %}
 
 <div>
-    {% for x in all_blog %}
-    <h1><a href="/blog?id={{x.id}}">{{x.title}}</a></h1>
-
-    <h2>{{x.body}}</h2>
+    {% for blog in all_blog %}
+    <h1><a href="/blog?id={{blog.id}}">{{blog.title}}</a></h1>
+    <h2>{{blog.body}}</h2>
+    <h3>Posted by:<a href="/blog?user={{blog.user.id}}">{{blog.user.username}}</a></h3>
     {%endfor%}
      
 </div>
@@ -13,7 +13,7 @@
 
 
 
-
+displays all blogs 
 
 
 
